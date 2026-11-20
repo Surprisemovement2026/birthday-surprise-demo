@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Beautiful Surprise | Happy Birthday</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #fffdfb;
+      color: #49413e;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      background:
+        radial-gradient(circle at 15% 20%, #fdf0ed 0, transparent 30%),
+        radial-gradient(circle at 85% 80%, #f9eee4 0, transparent 30%),
+        #fffdfb;
+    }
+
+    .content {
+      max-width: 720px;
+      animation: reveal 1.5s ease both;
+    }
+
+    .eyebrow {
+      color: #b99564;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .heart {
+      color: #c9a46d;
+      font-size: 35px;
+      margin-bottom: 20px;
+      animation: heartbeat 2s infinite;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 10vw, 100px);
+      line-height: 0.95;
+      font-weight: 500;
+      color: #55443f;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(25px, 5vw, 38px);
+      font-weight: 400;
+      color: #b99564;
+      margin-bottom: 30px;
+    }
+
+    .message {
+      font-size: 14px;
+      line-height: 2.2;
+      font-weight: 300;
+      color: #766c67;
+      max-width: 570px;
+      margin: 0 auto 35px;
+    }
+
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      font-style: italic;
+      color: #b99564;
+      margin-bottom: 35px;
+    }
+
+    button {
+      background: #b99564;
+      color: white;
+      border: 1px solid #b99564;
+      padding: 15px 35px;
+      border-radius: 40px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: transparent;
+      color: #a78353;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px #b9956425;
+    }
+
+    .surprise {
+      display: none;
+      margin-top: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #a78353;
+      animation: reveal 1s ease both;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 22px;
+      left: 0;
+      right: 0;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #b6aaa2;
+      text-transform: uppercase;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    @media (max-width: 600px) {
+      .message {
+        font-size: 13px;
+      }
+
+      .eyebrow {
+        letter-spacing: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="hero">
+    <div class="content">
+
+      <div class="eyebrow">A day as special as you</div>
+
+      <div class="heart">♡</div>
+
+      <h1>Happy<br>Birthday!</h1>
+
+      <h2>To Someone Truly Special</h2>
+
+      <p class="message">
+        Some people make the world more beautiful just by being in it.
+        Today is not just another day. Today is a celebration of someone
+        truly special.<br><br>
+
+        Every smile, every memory, every little moment with you means
+        more than words could ever explain.<br><br>
+
+        You deserve all the happiness this world has to offer.
+      </p>
+
+      <div class="signature">With Love, Always. ♡</div>
+
+      <button onclick="showSurprise()">
+        Let's Celebrate ♡
+      </button>
+
+      <div class="surprise" id="surprise">
+        You are someone's favourite person. 🤍
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Made with love · Just for you
+    </div>
+  </main>
+
+  <script>
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+      surprise.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
