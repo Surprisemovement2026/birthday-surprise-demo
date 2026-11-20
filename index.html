@@ -2,212 +2,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Beautiful Surprise | Happy Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Beautiful Surprise ♡</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      min-height: 100vh;
-      background: #fffdfb;
-      color: #49413e;
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-    }
+body{
+  background:#fffdfb;
+  color:#55443f;
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      position: relative;
-      background:
-        radial-gradient(circle at 15% 20%, #fdf0ed 0, transparent 30%),
-        radial-gradient(circle at 85% 80%, #f9eee4 0, transparent 30%),
-        #fffdfb;
-    }
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:60px 20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 15%,#fcebe9,transparent 35%),
+    radial-gradient(circle at 90% 85%,#f7eadb,transparent 35%),
+    #fffdfb;
+}
 
-    .content {
-      max-width: 720px;
-      animation: reveal 1.5s ease both;
-    }
+.content{
+  max-width:700px;
+  position:relative;
+  z-index:2;
+  animation:entrance 1.8s ease both;
+}
 
-    .eyebrow {
-      color: #b99564;
-      font-size: 11px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
+.eyebrow{
+  font-size:10px;
+  letter-spacing:6px;
+  color:#b99564;
+  margin-bottom:25px;
+  animation:fadeIn 2s ease both;
+}
 
-    .heart {
-      color: #c9a46d;
-      font-size: 35px;
-      margin-bottom: 20px;
-      animation: heartbeat 2s infinite;
-    }
+.heart{
+  font-size:42px;
+  color:#c5a16b;
+  margin-bottom:20px;
+  animation:heartbeat 2s infinite;
+  text-shadow:0 0 20px #d9b77c70;
+}
 
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(52px, 10vw, 100px);
-      line-height: 0.95;
-      font-weight: 500;
-      color: #55443f;
-      margin-bottom: 20px;
-    }
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(65px,11vw,110px);
+  line-height:.88;
+  font-weight:400;
+  color:#55443f;
+  margin-bottom:25px;
+  animation:titleReveal 1.8s ease both;
+}
 
-    h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(25px, 5vw, 38px);
-      font-weight: 400;
-      color: #b99564;
-      margin-bottom: 30px;
-    }
+h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+  font-weight:400;
+  color:#b99564;
+  margin-bottom:25px;
+}
 
-    .message {
-      font-size: 14px;
-      line-height: 2.2;
-      font-weight: 300;
-      color: #766c67;
-      max-width: 570px;
-      margin: 0 auto 35px;
-    }
+.message{
+  font-size:13px;
+  font-weight:300;
+  line-height:2.2;
+  color:#81736d;
+  max-width:540px;
+  margin:auto auto 30px;
+  animation:fadeIn 2.5s ease both;
+}
 
-    .signature {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 27px;
-      font-style: italic;
-      color: #b99564;
-      margin-bottom: 35px;
-    }
+.signature{
+  font-family:'Great Vibes',cursive;
+  font-size:35px;
+  color:#b99564;
+  margin-bottom:30px;
+}
 
-    button {
-      background: #b99564;
-      color: white;
-      border: 1px solid #b99564;
-      padding: 15px 35px;
-      border-radius: 40px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 12px;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
+button{
+  border:1px solid #b99564;
+  border-radius:50px;
+  padding:15px 38px;
+  background:linear-gradient(120deg,#b99564,#d8bd91);
+  color:white;
+  font-family:'Poppins',sans-serif;
+  font-size:11px;
+  letter-spacing:2px;
+  cursor:pointer;
+  box-shadow:0 8px 25px #b9956430;
+  transition:.4s;
+}
 
-    button:hover {
-      background: transparent;
-      color: #a78353;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px #b9956425;
-    }
+button:hover{
+  transform:translateY(-5px) scale(1.04);
+  box-shadow:0 12px 35px #b9956460;
+}
 
-    .surprise {
-      display: none;
-      margin-top: 30px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      color: #a78353;
-      animation: reveal 1s ease both;
-    }
+.footer{
+  position:absolute;
+  bottom:20px;
+  left:0;
+  width:100%;
+  font-size:9px;
+  letter-spacing:3px;
+  color:#b6aaa2;
+}
 
-    .footer {
-      position: absolute;
-      bottom: 22px;
-      left: 0;
-      right: 0;
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: #b6aaa2;
-      text-transform: uppercase;
-    }
+.petal{
+  position:absolute;
+  top:-40px;
+  width:12px;
+  height:18px;
+  background:#f1c8ca;
+  border-radius:80% 10% 80% 10%;
+  opacity:.6;
+  animation:fall linear infinite;
+  pointer-events:none;
+}
 
-    @keyframes reveal {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.surprise{
+  display:none;
+  margin-top:30px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:35px;
+  color:#b99564;
+  animation:surpriseReveal 1.2s ease both;
+}
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15); }
-    }
+.sparkle{
+  position:fixed;
+  pointer-events:none;
+  z-index:10;
+  animation:burst 1.5s ease-out forwards;
+  color:#c5a16b;
+  font-size:22px;
+}
 
-    @media (max-width: 600px) {
-      .message {
-        font-size: 13px;
-      }
+@keyframes entrance{
+  from{opacity:0;transform:translateY(35px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
-      .eyebrow {
-        letter-spacing: 3px;
-      }
-    }
-  </style>
+@keyframes titleReveal{
+  from{opacity:0;letter-spacing:15px}
+  to{opacity:1;letter-spacing:0}
+}
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+}
+
+@keyframes fall{
+  0%{transform:translateY(-10vh) rotate(0deg)}
+  100%{transform:translateY(115vh) rotate(500deg)}
+}
+
+@keyframes surpriseReveal{
+  from{opacity:0;transform:translateY(25px) scale(.8)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+@keyframes burst{
+  0%{opacity:1;transform:translate(0,0) scale(.5)}
+  100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1.5)}
+}
+
+@media(max-width:600px){
+  .eyebrow{letter-spacing:3px}
+  .message{font-size:12px}
+  h2{font-size:26px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <main class="hero">
-    <div class="content">
+<main class="hero">
 
-      <div class="eyebrow">A day as special as you</div>
+  <div class="content">
 
-      <div class="heart">♡</div>
+    <div class="eyebrow">A DAY AS SPECIAL AS YOU</div>
 
-      <h1>Happy<br>Birthday!</h1>
+    <div class="heart">♡</div>
 
-      <h2>To Someone Truly Special</h2>
+    <h1>Happy<br>Birthday!</h1>
 
-      <p class="message">
-        Some people make the world more beautiful just by being in it.
-        Today is not just another day. Today is a celebration of someone
-        truly special.<br><br>
+    <h2>To Someone Truly Special</h2>
 
-        Every smile, every memory, every little moment with you means
-        more than words could ever explain.<br><br>
+    <p class="message">
+      Some people make the world more beautiful just by being in it.
+      Today is a celebration of someone truly special.<br><br>
 
-        You deserve all the happiness this world has to offer.
-      </p>
+      Every smile, every memory, every little moment with you
+      means more than words could ever explain.<br><br>
 
-      <div class="signature">With Love, Always. ♡</div>
+      You deserve all the happiness this world has to offer.
+    </p>
 
-      <button onclick="showSurprise()">
-        Let's Celebrate ♡
-      </button>
+    <div class="signature">With Love, Always ♡</div>
 
-      <div class="surprise" id="surprise">
-        You are someone's favourite person. 🤍
-      </div>
+    <button onclick="showSurprise()">
+      LET'S CELEBRATE ♡
+    </button>
 
+    <div class="surprise" id="surprise">
+      You are someone's favourite person. 🤍
     </div>
 
-    <div class="footer">
-      Made with love · Just for you
-    </div>
-  </main>
+  </div>
 
-  <script>
-    function showSurprise() {
-      const surprise = document.getElementById("surprise");
-      surprise.style.display = "block";
-    }
-  </script>
+  <div class="footer">
+    MADE WITH LOVE · JUST FOR YOU
+  </div>
+
+</main>
+
+<script>
+// Floating flower petals
+for(let i=0;i<22;i++){
+  const petal=document.createElement('div');
+  petal.className='petal';
+  petal.style.left=Math.random()*100+'%';
+  petal.style.animationDuration=(7+Math.random()*10)+'s';
+  petal.style.animationDelay=(-Math.random()*15)+'s';
+  petal.style.transform=`scale(${0.5+Math.random()})`;
+  document.querySelector('.hero').appendChild(petal);
+}
+
+// Birthday surprise
+function showSurprise(){
+  const surprise=document.getElementById('surprise');
+  surprise.style.display='block';
+
+  const button=document.querySelector('button');
+  button.textContent='YOU ARE SPECIAL ♡';
+  button.disabled=true;
+
+  // Golden sparkle celebration
+  for(let i=0;i<45;i++){
+    const sparkle=document.createElement('span');
+    sparkle.className='sparkle';
+    sparkle.textContent=['✦','♡','✧','❋'][Math.floor(Math.random()*4)];
+    sparkle.style.left='50%';
+    sparkle.style.top='50%';
+    sparkle.style.setProperty('--x',(Math.random()-.5)*window.innerWidth+'px');
+    sparkle.style.setProperty('--y',(Math.random()-.5)*window.innerHeight+'px');
+    document.body.appendChild(sparkle);
+    setTimeout(()=>sparkle.remove(),1600);
+  }
+}
+</script>
 
 </body>
 </html>
