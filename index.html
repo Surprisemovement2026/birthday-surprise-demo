@@ -1,241 +1,582 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>A Beautiful Surprise ♡</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="description" content="A beautiful birthday surprise made with love.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 
-body{
-  background:#fffdfb;
-  color:#55443f;
-  font-family:'Poppins',sans-serif;
-  overflow-x:hidden;
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:60px 20px;
-  position:relative;
-  overflow:hidden;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #fffdfb;
+  color: #55443f;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================
+   MAIN HERO SECTION
+========================= */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  position: relative;
+  overflow: hidden;
+
   background:
-    radial-gradient(circle at 10% 15%,#fcebe9,transparent 35%),
-    radial-gradient(circle at 90% 85%,#f7eadb,transparent 35%),
+    radial-gradient(
+      circle at 10% 15%,
+      #fcebe9,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      #f7eadb,
+      transparent 35%
+    ),
     #fffdfb;
 }
 
-.content{
-  max-width:700px;
-  position:relative;
-  z-index:2;
-  animation:entrance 1.8s ease both;
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+  max-width: 720px;
+  width: 100%;
+
+  position: relative;
+  z-index: 2;
+
+  animation: entrance 1.8s ease both;
 }
 
-.eyebrow{
-  font-size:10px;
-  letter-spacing:6px;
-  color:#b99564;
-  margin-bottom:25px;
-  animation:fadeIn 2s ease both;
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 6px;
+
+  color: #b99564;
+
+  margin-bottom: 28px;
+
+  animation: fadeIn 2s ease both;
 }
 
-.heart{
-  font-size:42px;
-  color:#c5a16b;
-  margin-bottom:20px;
-  animation:heartbeat 2s infinite;
-  text-shadow:0 0 20px #d9b77c70;
+/* =========================
+   HEART ANIMATION
+========================= */
+
+.heart {
+  font-size: 44px;
+
+  color: #c5a16b;
+
+  margin-bottom: 25px;
+
+  animation: heartbeat 2s infinite;
+
+  text-shadow: 0 0 25px #d9b77c70;
 }
 
-h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(65px,11vw,110px);
-  line-height:.88;
-  font-weight:400;
-  color:#55443f;
-  margin-bottom:25px;
-  animation:titleReveal 1.8s ease both;
+/* =========================
+   BIRTHDAY TITLE
+========================= */
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(65px, 11vw, 110px);
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  color: #55443f;
+
+  margin-bottom: 25px;
+
+  animation: titleReveal 1.8s ease both;
 }
 
-h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:32px;
-  font-weight:400;
-  color:#b99564;
-  margin-bottom:25px;
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(25px, 5vw, 35px);
+
+  font-weight: 400;
+
+  color: #b99564;
+
+  margin-bottom: 28px;
 }
 
-.message{
-  font-size:13px;
-  font-weight:300;
-  line-height:2.2;
-  color:#81736d;
-  max-width:540px;
-  margin:auto auto 30px;
-  animation:fadeIn 2.5s ease both;
+/* =========================
+   BIRTHDAY MESSAGE
+========================= */
+
+.message {
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 2.2;
+
+  color: #81736d;
+
+  max-width: 550px;
+
+  margin: 0 auto 30px;
+
+  animation: fadeIn 2.5s ease both;
 }
 
-.signature{
-  font-family:'Great Vibes',cursive;
-  font-size:35px;
-  color:#b99564;
-  margin-bottom:30px;
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+
+  font-size: 36px;
+
+  color: #b99564;
+
+  margin-bottom: 32px;
 }
 
-button{
-  border:1px solid #b99564;
-  border-radius:50px;
-  padding:15px 38px;
-  background:linear-gradient(120deg,#b99564,#d8bd91);
-  color:white;
-  font-family:'Poppins',sans-serif;
-  font-size:11px;
-  letter-spacing:2px;
-  cursor:pointer;
-  box-shadow:0 8px 25px #b9956430;
-  transition:.4s;
+/* =========================
+   CELEBRATION BUTTON
+========================= */
+
+.celebrate-btn {
+  border: 1px solid #b99564;
+
+  border-radius: 50px;
+
+  padding: 16px 40px;
+
+  background: linear-gradient(
+    120deg,
+    #b99564,
+    #d8bd91
+  );
+
+  color: white;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px #b9956430;
+
+  transition: all 0.4s ease;
 }
 
-button:hover{
-  transform:translateY(-5px) scale(1.04);
-  box-shadow:0 12px 35px #b9956460;
+.celebrate-btn:hover {
+  transform: translateY(-5px) scale(1.04);
+
+  box-shadow: 0 12px 35px #b9956460;
 }
 
-.footer{
-  position:absolute;
-  bottom:20px;
-  left:0;
-  width:100%;
-  font-size:9px;
-  letter-spacing:3px;
-  color:#b6aaa2;
+.celebrate-btn:disabled {
+  opacity: 0.8;
+  cursor: default;
+  transform: none;
 }
 
-.petal{
-  position:absolute;
-  top:-40px;
-  width:12px;
-  height:18px;
-  background:#f1c8ca;
-  border-radius:80% 10% 80% 10%;
-  opacity:.6;
-  animation:fall linear infinite;
-  pointer-events:none;
+/* =========================
+   SPECIAL BIRTHDAY WISH
+========================= */
+
+.surprise {
+  display: none;
+
+  margin: 40px auto 0;
+
+  max-width: 560px;
+
+  padding: 35px 25px;
+
+  background: rgba(255,255,255,0.82);
+
+  border: 1px solid #e8d8bf;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 45px #b995641c;
+
+  animation: surpriseReveal 1.3s ease both;
 }
 
-.surprise{
-  display:none;
-  margin-top:30px;
-  font-family:'Cormorant Garamond',serif;
-  font-size:35px;
-  color:#b99564;
-  animation:surpriseReveal 1.2s ease both;
+.surprise h2 {
+  font-size: 32px;
+  margin-bottom: 22px;
 }
 
-.sparkle{
-  position:fixed;
-  pointer-events:none;
-  z-index:10;
-  animation:burst 1.5s ease-out forwards;
-  color:#c5a16b;
-  font-size:22px;
+.surprise p {
+  font-size: 12px;
+
+  line-height: 2.2;
+
+  font-weight: 300;
+
+  color: #766c67;
 }
 
-@keyframes entrance{
-  from{opacity:0;transform:translateY(35px)}
-  to{opacity:1;transform:translateY(0)}
+.surprise .signature {
+  margin: 25px 0 0;
 }
 
-@keyframes titleReveal{
-  from{opacity:0;letter-spacing:15px}
-  to{opacity:1;letter-spacing:0}
+/* =========================
+   FLOATING FLOWER PETALS
+========================= */
+
+.petal {
+  position: absolute;
+
+  top: -40px;
+
+  width: 12px;
+  height: 19px;
+
+  background: #f1c8ca;
+
+  border-radius: 80% 10% 80% 10%;
+
+  opacity: 0.65;
+
+  animation: fall linear infinite;
+
+  pointer-events: none;
 }
 
-@keyframes fadeIn{
-  from{opacity:0}
-  to{opacity:1}
+/* =========================
+   GOLDEN SPARKLES
+========================= */
+
+.sparkle {
+  position: fixed;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  color: #c5a16b;
+
+  font-size: 22px;
+
+  animation: burst 1.7s ease-out forwards;
 }
 
-@keyframes heartbeat{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.18)}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  position: absolute;
+
+  bottom: 20px;
+
+  left: 0;
+
+  width: 100%;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #b6aaa2;
 }
 
-@keyframes fall{
-  0%{transform:translateY(-10vh) rotate(0deg)}
-  100%{transform:translateY(115vh) rotate(500deg)}
-}
+/* =========================
+   ANIMATIONS
+========================= */
 
-@keyframes surpriseReveal{
-  from{opacity:0;transform:translateY(25px) scale(.8)}
-  to{opacity:1;transform:translateY(0) scale(1)}
-}
+@keyframes entrance {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
 
-@keyframes burst{
-  0%{opacity:1;transform:translate(0,0) scale(.5)}
-  100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1.5)}
-}
-
-@media(max-width:600px){
-  .eyebrow{letter-spacing:3px}
-  .message{font-size:12px}
-  h2{font-size:26px}
-}
-
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    scroll-behavior:auto!important;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    letter-spacing: 15px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(115vh) rotate(500deg);
+  }
+}
+
+@keyframes surpriseReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(1.5);
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 65px 18px;
+  }
+
+  .eyebrow {
+    letter-spacing: 3px;
+    font-size: 9px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  .surprise {
+    padding: 28px 18px;
+  }
+
+  .surprise h2 {
+    font-size: 27px;
+  }
+
+  .surprise p {
+    font-size: 11px;
+  }
+
+  .signature {
+    font-size: 32px;
+  }
+
+  .footer {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Accessibility: reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     BACKGROUND MUSIC
+========================= -->
+
+<audio id="birthdayMusic" preload="auto" loop>
+  <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     MAIN BIRTHDAY WEBSITE
+========================= -->
+
 <main class="hero">
 
   <div class="content">
 
-    <div class="eyebrow">A DAY AS SPECIAL AS YOU</div>
+    <div class="eyebrow">
+      A DAY AS SPECIAL AS YOU
+    </div>
 
-    <div class="heart">♡</div>
+    <div class="heart">
+      ♡
+    </div>
 
-    <h1>Happy<br>Birthday!</h1>
+    <h1>
+      Happy<br>
+      Birthday!
+    </h1>
 
-    <h2>To Someone Truly Special</h2>
+    <h2>
+      To Someone Truly Special
+    </h2>
 
     <p class="message">
-      Some people make the world more beautiful just by being in it.
-      Today is a celebration of someone truly special.<br><br>
 
-      Every smile, every memory, every little moment with you
-      means more than words could ever explain.<br><br>
+      Some people make the world more beautiful
+      just by being in it.
 
-      You deserve all the happiness this world has to offer.
+      Today is not just another day.
+      Today is a celebration of someone truly special.
+
+      <br><br>
+
+      Every smile, every memory, every little moment
+      with you means more than words could ever explain.
+
+      <br><br>
+
+      You deserve all the happiness
+      this world has to offer.
+
     </p>
 
-    <div class="signature">With Love, Always ♡</div>
+    <div class="signature">
+      With Love, Always ♡
+    </div>
 
-    <button onclick="showSurprise()">
+    <button
+      class="celebrate-btn"
+      id="celebrateButton"
+      onclick="showSurprise()"
+    >
       LET'S CELEBRATE ♡
     </button>
 
+
+    <!-- SPECIAL WISH -->
+
     <div class="surprise" id="surprise">
-      You are someone's favourite person. 🤍
+
+      <h2>
+        A Special Wish For You ♡
+      </h2>
+
+      <p>
+
+        Today is all about you, and I hope your day
+        is as beautiful and special as your heart.
+
+        <br><br>
+
+        May every dream you carry in your heart come true.
+        May your life always be filled with endless smiles,
+        unforgettable memories, genuine love,
+        and beautiful surprises.
+
+        <br><br>
+
+        Thank you for being the wonderful person you are.
+        The world is a little more beautiful because
+        you are in it.
+
+        <br><br>
+
+        Always remember, you are loved more than
+        words can ever express. 🤍
+
+      </p>
+
+      <div class="signature">
+        With All My Love ♡
+      </div>
+
     </div>
 
   </div>
+
+
+  <!-- FOOTER -->
 
   <div class="footer">
     MADE WITH LOVE · JUST FOR YOU
@@ -243,40 +584,148 @@ button:hover{
 
 </main>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-// Floating flower petals
-for(let i=0;i<22;i++){
-  const petal=document.createElement('div');
-  petal.className='petal';
-  petal.style.left=Math.random()*100+'%';
-  petal.style.animationDuration=(7+Math.random()*10)+'s';
-  petal.style.animationDelay=(-Math.random()*15)+'s';
-  petal.style.transform=`scale(${0.5+Math.random()})`;
-  document.querySelector('.hero').appendChild(petal);
+
+/* FLOATING FLOWER PETALS */
+
+const hero = document.querySelector('.hero');
+
+for (let i = 0; i < 24; i++) {
+
+  const petal = document.createElement('div');
+
+  petal.className = 'petal';
+
+  petal.style.left = Math.random() * 100 + '%';
+
+  petal.style.animationDuration =
+    (7 + Math.random() * 10) + 's';
+
+  petal.style.animationDelay =
+    (-Math.random() * 15) + 's';
+
+  const size = 0.5 + Math.random() * 0.8;
+
+  petal.style.width = (12 * size) + 'px';
+  petal.style.height = (19 * size) + 'px';
+
+  hero.appendChild(petal);
+
 }
 
-// Birthday surprise
-function showSurprise(){
-  const surprise=document.getElementById('surprise');
-  surprise.style.display='block';
 
-  const button=document.querySelector('button');
-  button.textContent='YOU ARE SPECIAL ♡';
-  button.disabled=true;
+/* BIRTHDAY SURPRISE BUTTON */
 
-  // Golden sparkle celebration
-  for(let i=0;i<45;i++){
-    const sparkle=document.createElement('span');
-    sparkle.className='sparkle';
-    sparkle.textContent=['✦','♡','✧','❋'][Math.floor(Math.random()*4)];
-    sparkle.style.left='50%';
-    sparkle.style.top='50%';
-    sparkle.style.setProperty('--x',(Math.random()-.5)*window.innerWidth+'px');
-    sparkle.style.setProperty('--y',(Math.random()-.5)*window.innerHeight+'px');
-    document.body.appendChild(sparkle);
-    setTimeout(()=>sparkle.remove(),1600);
+let surpriseStarted = false;
+
+async function showSurprise() {
+
+  if (surpriseStarted) return;
+
+  surpriseStarted = true;
+
+  const surprise =
+    document.getElementById('surprise');
+
+  const button =
+    document.getElementById('celebrateButton');
+
+  const music =
+    document.getElementById('birthdayMusic');
+
+
+  /* SHOW SPECIAL WISH */
+
+  surprise.style.display = 'block';
+
+  button.textContent = 'A WISH JUST FOR YOU ♡';
+
+  button.disabled = true;
+
+
+  /* PLAY UPLOADED MUSIC */
+
+  try {
+
+    music.volume = 0.65;
+
+    await music.play();
+
+  } catch (error) {
+
+    console.log(
+      'Music could not play. Check the MP3 file:',
+      error
+    );
+
+    button.textContent = 'WISH REVEALED ♡';
+
   }
+
+
+  /* GOLDEN SPARKLE CELEBRATION */
+
+  const symbols = [
+    '✦',
+    '♡',
+    '✧',
+    '❋',
+    '✧'
+  ];
+
+  for (let i = 0; i < 55; i++) {
+
+    const sparkle =
+      document.createElement('span');
+
+    sparkle.className = 'sparkle';
+
+    sparkle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    sparkle.style.left = '50%';
+
+    sparkle.style.top = '50%';
+
+    sparkle.style.setProperty(
+      '--x',
+      (Math.random() - 0.5) *
+      window.innerWidth + 'px'
+    );
+
+    sparkle.style.setProperty(
+      '--y',
+      (Math.random() - 0.5) *
+      window.innerHeight + 'px'
+    );
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 1800);
+
+  }
+
+
+  /* SCROLL TO THE BIRTHDAY WISH */
+
+  setTimeout(() => {
+
+    surprise.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+
+  }, 400);
+
 }
+
 </script>
 
 </body>
